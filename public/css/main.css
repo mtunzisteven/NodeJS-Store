@@ -13,14 +13,23 @@ body {
 main {
   padding: 1rem;
   margin: auto;
+  min-height: 350px;
 }
 
 main h1 {
   font-family: 'Redressed', cursive;
 }
 
+main h2 {
+  text-align: center;
+  margin: 50px;
+}
+
 form {
   display: inline;
+  border: 1px solid #a1a1a1;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .centered {
@@ -297,6 +306,7 @@ div.footer-top-block {
   background-color: #024402;
   padding: 10px 0;
   color: #f0f0f0;
+  bottom:0;
 }
 
 div.footer-top-block a {

@@ -61,7 +61,6 @@ router.post(
                 }) // promise returned if no email is fouind in the db matching the one entered.
 
             })
-            .normalizeEmail() // make all letters lowercase
     ],
     authController.postLogin
     );
@@ -96,8 +95,7 @@ router.post(
                     }
                 }); // promise returned if no email is fouind in the db matching the one entered.
 
-            })
-            .normalizeEmail(), // make all letters lowercase and remove special characters
+            }),
         // chaning a second validator for req.body object
         body('password', // req.body.password value being validated here
             'Please make sure password is at least 8 characters long and includes letters and numbers' // error message displayed
