@@ -200,7 +200,9 @@ exports.postReset = (req, res, next) => {
                     html: `<p>Hello. You requested a password reset. Please click on this <a href=${APP_URL}/reset/${token}'>link</a> to reset your password.</p>`
                 })
             })
-            .catch(err => serverError(err, res));
+              .catch(err => {
+    serverError(err, res);
+  });
     });
 };
 
@@ -223,7 +225,9 @@ exports.getNewPassword = (req, res, next) => {
             passwordToken: token // passing this for the hidden input that receives it
         });
     })
-    .catch(err => serverError(err, res));
+      .catch(err => {
+    serverError(err, res);
+  });
 
   };
 
@@ -262,6 +266,8 @@ exports.postNewPassword = (req, res, next) => {
     .then(result => {
         res.redirect('/login');
     })
-    .catch(err => serverError(err, res));
+      .catch(err => {
+    serverError(err, res);
+  });
 
 };

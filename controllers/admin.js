@@ -71,7 +71,9 @@ exports.postAddProduct = (req, res, next) => {
     console.log('Created Product');
     res.redirect('/admin/products');
   })
-  .catch(err => serverError(err, res));
+    .catch(err => {
+    serverError(err, res);
+  });
 
 };
 
@@ -101,7 +103,9 @@ exports.getEditProduct = (req, res, next) => {
 
       });
     })
-    .catch(err => serverError(err, res));
+      .catch(err => {
+    serverError(err, res);
+  });
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -158,7 +162,9 @@ exports.postEditProduct = (req, res, next) => {
     console.log('UPDATED PRODUCT!');
     res.redirect('/admin/products');
   })
-  .catch(err => serverError(err, res));
+    .catch(err => {
+    serverError(err, res);
+  });
 
 };
 
@@ -191,7 +197,9 @@ exports.getProducts = (req, res, next) => {
 
       });
   })
-  .catch(err => serverError(err, res));
+    .catch(err => {
+    serverError(err, res);
+  });
 };
 
 exports.deleteProduct = (req, res, next) => {
