@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const pdfConstructor = require('pdfkit');
-const serverError = require('../util/serverError'); // server error helper
+const serverError = require('../util/serverErrorPage'); // server error helper
 
 const Product = require('../models/product');
 const Order = require('../models/order');
@@ -10,7 +10,7 @@ const Order = require('../models/order');
 exports.getProducts = (req, res, next) => {
   Product.find() // mongoose function
     .then(products => {
-
+ 
       res.render('shop/product-list', {
         prods: products,
         pageTitle: 'All Products',

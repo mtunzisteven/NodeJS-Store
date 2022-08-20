@@ -1,6 +1,6 @@
 const Product = require('../models/product'); // Product object
 const fileHelper = require('../util/file'); // file helper
-const serverError = require('../util/serverError'); // server error helper
+const serverError = require('../util/serverErrorPage'); // server error helper
 
 const {validationResult} = require('express-validator'); // import validationResult method of express validator sub package that stores all errors stored at 'check(property).isProperty'
 

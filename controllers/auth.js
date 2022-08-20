@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const sendgrindTransport = require('nodemailer-sendgrid-transport');
 require('dotenv').config(); // import config values
 
-const serverError = require('../util/serverError'); // server error helper
+const serverError = require('../util/serverErrorPage'); // server error helper
 
 const User = require('../models/user');
 

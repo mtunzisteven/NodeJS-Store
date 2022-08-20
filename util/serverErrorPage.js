@@ -1,7 +1,7 @@
 
 // more elegant way to handle all server errors
 
-exports.serverError = (err, res) =>{
+const serverError = (err, res) =>{
 
     const status = err.statuscode || 500;
     const message = err.message;
@@ -16,3 +16,6 @@ exports.serverError = (err, res) =>{
     });
     
   }
+
+
+  exports.serverError = serverError;
