@@ -25,7 +25,7 @@ router.post(
             .isLength({max: 36}), 
         body( 
             'description', // req.body.title value being validated here
-            'Title must be between 36 and 260 characters' // error message displayed
+            'Description must be between 36 and 260 characters' // error message displayed
             )
             .isLength({min: 36})
             .isLength({max: 260}), 

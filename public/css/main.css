@@ -32,6 +32,11 @@ form {
   border-radius: 5px;
 }
 
+
+form.btn-form {
+  border: none;
+}
+
 .centered {
   text-align: center;
 }
@@ -98,6 +103,10 @@ form {
 .main-header__item a.active,
 .main-header__item button:hover {
   color: #d1b200;
+}
+
+.dropdown-item{
+  padding-left: 30px;
 }
 
 .mobile-nav {
